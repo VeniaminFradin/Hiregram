@@ -1,12 +1,7 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		},
-		{
-			"name": "Hiregram",
-			"path": "../Hiregram"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": ".."
+        }
+    ]
 }
