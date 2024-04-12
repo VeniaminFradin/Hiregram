@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('searchButton').addEventListener('click', function() {
-      // Functionality that executes when the button is clicked
-  });
-});
-
 document.getElementById('searchButton').addEventListener('click', function() {
   displayResults(1);
 });
