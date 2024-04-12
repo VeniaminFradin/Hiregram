@@ -50,6 +50,7 @@ function showDetail(result) {
   });
 }
 
+
 document.getElementById('prevPage').addEventListener('click', function() {
   if (currentPage > 1) {
       currentPage -= 1;
@@ -112,3 +113,34 @@ function displayResults(results) {
 }
 
 // Add the showDetail function from the previous example here
+
+function generateDetailPageContent(result) {
+  return `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Detail View</title>
+          <style>
+              body { font-family: Arial, sans-serif; padding: 20px; }
+              button { padding: 8px 16px; margin-top: 20px; }
+          </style>
+      </head>
+      <body>
+          <button onclick="window.close()">Close Window</button>
+          <h2>${result.role} - ${result.companyName}</h2>
+          <p><strong>Location:</strong> ${result.location}</p>
+          <p><strong>Company Description:</strong> ${result.companyDescription}</p>
+          <p><strong>Role Description:</strong> ${result.roleDescription}</p>
+          <a href="${result.applyLink}" target="_blank"><button>Apply Online</button></a>
+      </body>
+      </html>
+  `;
+}
+
+function showDetail(result) {
+  const newWindow = window.open('', '_blank');
+  newWindow.document.write(generateDetailPageContent(result));
+  newWindow.document.close(); // Close the document to complete the write operation
+}

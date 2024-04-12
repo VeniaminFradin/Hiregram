@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiregram Search Bar</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Job Search Application</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logotype"> <img src="images/logo.svg" alt="Logo" width="100" height="100"></div>
-        <div class="text">all jobs in
-          one messenger</div>
-        <input type="text" class="search-bar" placeholder="Job">
-        <input type="text" class="search-bar" placeholder="Location">
+    <div class="search-fields">
+        <input type="text" id="roleInput" placeholder="Job Role">
+        <input type="text" id="locationInput" placeholder="Location">
         <button class="search-button" id="searchButton">Search</button>
-        <div id="searchTags" class="search-tags"></div>
-        <div id="searchResults" class="search-results"></div>
     </div>
-    </div>
-
-<script src="scripts/main.js"></script>
+    <div id="searchTags" class="search-tags"></div>
+    <div id="searchResults" class="search-results"></div>
+    <script src="script.js"></script>
 </body>
 </html>
